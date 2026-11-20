@@ -37,23 +37,27 @@
     }
 
     .hero-badge {
+      width:auto;
+      height:auto;
+      display: flex;
+      align-items: center;
+      justify-content:center;
       position: absolute;
-      left: 142px;
-      top: 14px;
+      left: 16px;
+      top: 40px;
       z-index: 2;
-      min-width: 106px;
-      height: 34px;
-      display: grid;
-      place-items: center;
-      padding: 0 10px;
-      color: #eadbb7;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 16px;
-      letter-spacing: -1px;
-      border: 1px solid rgba(236, 216, 169, .75);
-      background: rgba(45, 49, 75, .78);
-      transform: rotate(-2deg);
-      /* box-shadow: 0 2px 8px rgba(0,0,0,.12); */
+      background: rgba(0,0,0,0.7);
+      padding: 8px;
+      border-radius: 8px; 
+      border: 0.5px solid rgba(255,255,255,0.3);
+    }
+
+    .hero-badge-text {
+      color: #09CE5A;
+      font-size: 12px;
+      position:relative;
+      font-weight: 300;
+      line-height: 12px;
     }
 
 
@@ -84,6 +88,11 @@
       font-weight: 700;
     }
 
+    .tabs > .tab:first-child {
+      width: 70px;
+      flex: 0 0 70px;
+    }
+
     .tab.active {
       color: #FC3A3E;
     }
@@ -108,11 +117,10 @@
 
     .tab.home .icon { color: #3a78c7; }
     .tab.rank .icon { color: #4a8cda; }
-
     .count-badge {
       position: absolute;
       top: 4px;
-      right: -16px;
+      right: -20px;
       width: auto;
       height: auto;
       display: grid;
@@ -122,6 +130,7 @@
       color: #fff;
       font-size: 10px;
       line-height: 1;
+      font-weight: 300;
       padding: 4px 6px 4px 6px;
     }
 
@@ -218,5 +227,5 @@
 
     @media (max-width: 389px) {
       .hero { height: 44vw; max-height: 174px; }
-      .tabs { height: 14vw; max-height: 54px; }
+      .tabs {  height: 14vw; max-height: 54px; }
     }

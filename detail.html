@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>워크샵 공지 상세</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="container_detail">
+    <nav class="detail-nav" aria-label="상세 내비게이션">
+      <a class="back-link" href="./index.html" aria-label="목록으로 돌아가기">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="m15 5-7 7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </a>
+      <h1 class="detail-title" id="detail-title">공지를 찾을 수 없습니다</h1>
+    </nav>
+    <img class="detail-image" id="detail-image" alt="워크샵 상세 안내" hidden />
+  </main>
+  <script>
+    const notices = {
+      '1': ['춥지만 오히려 신나', '워크샵 전체 일정', './img/w_sub_01.png'],
+      '2': ['우당탕탕 인천원정대', '출발 차량/이동 공지', './img/w_sub_02.png'],
+      '3': ['그래서, 소생은 어느 차를 타면 되겠소?', '집결 후 차량 배치', './img/w_sub_03.png'],
+      '4': ['두근두근 방배정', '숙소 동호수 배치', './img/w_sub_04.png'],
+      '5': ['잊지 말아요', '개인 소지품 목록', './img/w_sub_05.png']
+    };
+    const id = new URLSearchParams(window.location.search).get('id');
+    const notice = Object.hasOwn(notices, id) ? notices[id] : null;
+    if (notice) {
+      const [title, subtitle, image] = notice;
+      document.title = `${subtitle} | 워크샵 공지`;
+      document.getElementById('detail-title').textContent = title;
+      const detailImage = document.getElementById('detail-image');
+      detailImage.src = image;
+      detailImage.alt = title;
+      detailImage.hidden = false;
+    }
+  </script>
+</body>
+</html>

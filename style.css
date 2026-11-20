@@ -1,0 +1,211 @@
+    :root {
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      color: #111;
+      background: #f3f3f3;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: #f3f3f3;
+    }
+
+    .container,
+    .container_detail {
+      width: 100%;
+      max-width: 420px;
+      min-height: 100vh;
+      margin: 0 auto;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .hero {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 304px;
+      overflow: hidden;
+      object-fit: cover;
+      background-image: url('./img/key_visual.png');
+      background-size: cover;
+      padding: 70px 16px 0 16px;
+    }
+
+    .hero-badge {
+      position: absolute;
+      left: 142px;
+      top: 14px;
+      z-index: 2;
+      min-width: 106px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      padding: 0 10px;
+      color: #eadbb7;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 16px;
+      letter-spacing: -1px;
+      border: 1px solid rgba(236, 216, 169, .75);
+      background: rgba(45, 49, 75, .78);
+      transform: rotate(-2deg);
+      /* box-shadow: 0 2px 8px rgba(0,0,0,.12); */
+    }
+
+
+    .tabs {
+      position: relative;
+      height: 48px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      border-bottom: 1.5px solid #eee;
+      background: #fff;
+      gap: 0px;
+      padding: 0 8px;
+    }
+
+    .tab {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      align-items: center;  
+      border: 0;
+      background: transparent;
+      color: #555;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .tab.active {
+      color: #FC3A3E;
+    }
+
+    .tab.active::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0px;
+      width: 100%;
+      height: 2px;
+      background: #FC3A3E;
+      transform: translateX(-50%);
+    }
+
+    .tab .icon {
+      position: absolute;
+      top: 1px;
+      font-size: 16px;
+      line-height: 1;
+    }
+
+    .tab.home .icon { color: #3a78c7; }
+    .tab.rank .icon { color: #4a8cda; }
+
+    .count-badge {
+      position: absolute;
+      top: 4px;
+      right: -16px;
+      width: auto;
+      height: auto;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: #eb4b62;
+      color: #fff;
+      font-size: 10px;
+      line-height: 1;
+      padding: 4px 6px 4px 6px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 8px;
+      row-gap: 20px;
+      padding: 16px 16px 72px;
+      background: #fff;
+    }
+
+    .card {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+      width: 100%;
+      min-width: 0;
+      cursor: pointer;
+    }
+
+    .card:focus-visible, .back-link:focus-visible {
+      outline: 3px solid #FC3A3E;
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
+
+    .detail-nav {
+      display: grid;
+      grid-template-columns: 52px minmax(0, 1fr) 52px;
+      align-items: center;
+      height: 52px;
+      border-bottom: 1px solid #eee;
+      background: #fff;
+    }
+    .back-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      color: #111;
+      text-decoration: none;
+    }
+    .detail-title {
+      min-width: 0;
+      margin: 0;
+      overflow: hidden;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.4;
+      text-align: center;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .detail-image { display: block; width: 100%; height: auto; ; }
+    .detail-image[hidden] { display: none; }
+
+    .card-image {
+      display: block;
+      width: 100%;
+      max-width: 390px;
+      height: auto;
+      overflow: hidden;
+      border-radius: 6px;
+      background: #ddd;
+      gap: 4px;
+    }
+    .title {
+      height: auto;
+      margin-top: 8px;
+      margin-bottom: 4px;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: #777;
+      font-size: 12px;
+      line-height: 1.4;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 389px) {
+      .hero { height: 44vw; max-height: 174px; }
+      .tabs { height: 14vw; max-height: 54px; }
+    }

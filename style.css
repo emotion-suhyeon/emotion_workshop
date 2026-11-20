@@ -20,6 +20,8 @@
       margin: 0 auto;
       overflow: hidden;
       background: #fff;
+      padding: 52px, 0;
+      
     }
 
     .hero {
@@ -149,6 +151,10 @@
 
     .detail-nav {
       display: grid;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      max-width: 420px;
       grid-template-columns: 52px minmax(0, 1fr) 52px;
       align-items: center;
       height: 52px;
@@ -175,7 +181,12 @@
       text-overflow: ellipsis;
       white-space: nowrap;
     }
-    .detail-image { display: block; width: 100%; height: auto; ; }
+    .detail-image {
+      display: block; 
+      width: 100%; 
+      height: auto;  
+      margin-top: 52px;
+    }
     .detail-image[hidden] { display: none; }
 
     .card-image {

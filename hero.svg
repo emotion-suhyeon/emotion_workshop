@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="174" viewBox="0 0 390 174">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ecb878"/>
+      <stop offset=".38" stop-color="#9c9b9b"/>
+      <stop offset=".72" stop-color="#4f6688"/>
+      <stop offset="1" stop-color="#202a50"/>
+    </linearGradient>
+    <linearGradient id="sign" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7d5a69"/>
+      <stop offset=".5" stop-color="#3a4268"/>
+      <stop offset="1" stop-color="#171b35"/>
+    </linearGradient>
+  </defs>
+  <rect width="390" height="174" fill="url(#sky)"/>
+  <circle cx="42" cy="42" r="24" fill="#f5dcc3" opacity=".85"/>
+  <circle cx="348" cy="28" r="20" fill="#b2bac8" opacity=".5"/>
+  <g opacity=".96">
+    <circle cx="70" cy="122" r="17" fill="#d7a888"/>
+    <circle cx="112" cy="115" r="19" fill="#b98570"/>
+    <circle cx="154" cy="120" r="18" fill="#e2b795"/>
+    <circle cx="200" cy="112" r="20" fill="#ba8267"/>
+    <circle cx="246" cy="118" r="19" fill="#ddb28f"/>
+    <circle cx="292" cy="124" r="18" fill="#ca9277"/>
+    <circle cx="332" cy="130" r="17" fill="#f0c2a0"/>
+  </g>
+  <g opacity=".9">
+    <path d="M48 174v-47c0-12 10-22 22-22s22 10 22 22v47z" fill="#202b48"/>
+    <path d="M91 174v-52c0-13 11-24 24-24s24 11 24 24v52z" fill="#f1f0ea"/>
+    <path d="M133 174v-47c0-13 11-24 24-24s24 11 24 24v47z" fill="#2d3d5f"/>
+    <path d="M177 174v-54c0-14 12-26 26-26s26 12 26 26v54z" fill="#c6a07e"/>
+    <path d="M224 174v-48c0-13 11-24 24-24s24 11 24 24v48z" fill="#efe7dc"/>
+    <path d="M272 174v-43c0-12 10-22 22-22s22 10 22 22v43z" fill="#694a58"/>
+  </g>
+  <rect x="137" y="16" width="116" height="40" rx="2" fill="url(#sign)" stroke="#bba779" stroke-width="2" transform="rotate(-2 195 36)"/>
+  <text x="195" y="43" fill="#f1ddb1" font-family="Georgia, serif" font-size="18" text-anchor="middle" transform="rotate(-2 195 36)">어긋살 가됩니다</text>
+  <text x="195" y="156" fill="#fff" font-family="Georgia, serif" font-size="27" font-weight="700" text-anchor="middle" stroke="#5f6072" stroke-width=".5">원크하십니다</text>
+</svg>
